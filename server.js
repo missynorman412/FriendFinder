@@ -8,7 +8,20 @@ var app = express();
 var PORT = process.env.PORT;
 
 // Expose the public directory to access CSS files
-app.use(express.static(path.join(__dirname, './app/public')));
+module.exports = function(app) {
+	// console.log('___ENTER htmlRoutes.js___');
+
+	// Home page
+	app.get('/', function(req, res) {
+        res.sendFile(path.join(__dirname, '../../Public/home.html'));
+      });
+
+	// Survey page
+	app.get('/survey', function(req, res) {
+		res.sendFile(path.join(__dirname, '../Public/survey.html'));
+	});
+};
+
 
 // Add middleware for parsing incoming request bodies
 app.use(bodyParser.json());

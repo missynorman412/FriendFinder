@@ -8,7 +8,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 // Expose the public directory to access CSS files
-module.exports = function(app) {
+module.exports = function() {
 	 console.log('___ENTER htmlRoutes.js___');
 
 	// Home page

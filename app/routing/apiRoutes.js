@@ -40,9 +40,6 @@ module.exports = function(app) {
 
 			// If lowest difference, record the friend match
 			if (diff < totalDifference) {
-				// console.log('Closest match found = ' + diff);
-				// console.log('Friend name = ' + friends[i].name);
-				// console.log('Friend image = ' + friends[i].photo);
 
 				totalDifference = diff;
 				matchName = friends[i].name;

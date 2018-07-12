@@ -13,7 +13,7 @@ module.exports = function(app) {
 
 	// Home page
 	app.get('/html', function(req, res) {
-        res.sendFile(path.join(__dirname, 'home.html'));
+        res.sendFile(path.join(__dirname, '/html/home.html'));
       });
 
 	// Survey page
@@ -34,5 +34,5 @@ require(path.join(__dirname, '/app/routing/htmlRoutes.js'))(app);
 
 // Start listening on PORT
 app.listen(PORT, function() {
-  console.log('Friend Finder app is not listening on PORT: ' + PORT);
+  console.log('Friend Finder app is listening on PORT: ' + PORT);
 });

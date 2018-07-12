@@ -12,12 +12,12 @@ module.exports = function(app) {
 	// console.log('___ENTER htmlRoutes.js___');
 
 	// Home page
-	app.get('/Public/', function(req, res) {
+	app.get('/Public', function(req, res) {
         res.sendFile(path.join(__dirname, 'home.html'));
       });
 
 	// Survey page
-	app.get('/Public/', function(req, res) {
+	app.get('/Public', function(req, res) {
 		res.sendFile(path.join(__dirname, 'survey.html'));
 	});
 };

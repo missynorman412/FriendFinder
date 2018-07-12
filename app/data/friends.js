@@ -155,5 +155,4 @@ module.exports = friendsArray;
 			<option value="5">5 (Strongly Agree)</option>
 		</select>
 	</div>
-</div>
-	
+

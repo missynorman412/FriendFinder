@@ -126,33 +126,3 @@ name: 'Barry Norman',
 			'1'
 		]
 };
-
-module.exports = friendsArray;
-		[];
-
-<div class="input-field col s12">
-	<h3>Question 9</h3>
-	<h5>I like arts and crafts.</h5>
-	<select data-placeholder="" class="browser-default" id="q10">
-		<option value="">Choose an option</option>
-		<option value="1">1 (Strongly Disagree)</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-		<option value="5">5 (Strongly Agree)</option>
-	</select>
-</div>
-
-	<div class="input-field col s12">
-		<h3>Question 9</h3>
-		<h5>I like arts and crafts.</h5>
-		<select data-placeholder="" class="browser-default" id="q10">
-			<option value="">Choose an option</option>
-			<option value="1">1 (Strongly Disagree)</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5 (Strongly Agree)</option>
-		</select>
-	</div>
-

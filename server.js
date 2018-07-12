@@ -9,7 +9,7 @@ var PORT = process.env.PORT || 3000;
 
 // Expose the public directory to access CSS files
 module.exports = function(app) {
-	// console.log('___ENTER htmlRoutes.js___');
+	 console.log('___ENTER htmlRoutes.js___');
 
 	// Home page
 	app.get('/Public', function(req, res) {

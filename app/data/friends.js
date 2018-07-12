@@ -2,7 +2,7 @@
 var friendsArray = [
 	{
 		name: 'Scooter',
-		photo: 'http://cdn3-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-15.jpg',
+		photo: '',
 		scores: [
 			'1',
 			'5',
@@ -18,7 +18,7 @@ var friendsArray = [
 	},
 	{
 		name: 'Fluffy',
-		photo: 'https://i.ytimg.com/vi/mRf3-JkwqfU/hqdefault.jpg',
+		photo: '',
 		scores: [
 			'2',
 			'4',
@@ -32,73 +32,39 @@ var friendsArray = [
 			'5'
 		]
 	},
+]
+name: 'Spencer',
+	photo,
+	'4',
+	'3',
+	'5',
+	'1',
+	'1',
+	'5',
+	'5',
+	'1',
+	'1',
+	'1'
+
+
+name: 'Barry Norman',
+	photo, '',
+	scores, [
+		'1',
+		'1',
+		'5',
+		'1',
+		'3',
+		'2',
+		'5',
+		'1',
+		'1',
+		'5'
+	]
+	,
 	{
-		name: 'Spencer',
-		photo: 'http://cdn3-www.cattime.com/assets/uploads/2011/08/best-kitten-names-1.jpg',
-		scores: [
-			'4',
-			'3',
-			'5',
-			'1',
-			'1',
-			'5',
-			'5',
-			'1',
-			'1',
-			'1'
-		]
-	},
-	{
-		name: 'Zackariah',
-		photo: 'https://pbs.twimg.com/profile_images/562466745340817408/_nIu8KHX.jpeg',
-		scores: [
-			'5',
-			'1',
-			'2',
-			'1',
-			'3',
-			'4',
-			'1',
-			'3',
-			'3',
-			'4'
-		]
-	},
-	{
-		name: 'Cloe',
-		photo: 'http://4.bp.blogspot.com/-HTvSYzA-pO4/UgQb4Zh_u0I/AAAAAAAAEuI/XwhtogT_1tA/s1600/3+cute2.jpg',
-		scores: [
-			'1',
-			'1',
-			'5',
-			'5',
-			'5',
-			'5',
-			'5',
-			'5',
-			'5',
-			'1'
-		]
-	},
-	{
-		name: 'Mrs. Piggy',
-		photo: 'http://img.mindbodygreen.com/image/upload/c_limit,w_738,f_auto/ftr/Miss-Piggy-large-tonya-312.jpg',
-		scores: [
-			'1',
-			'1',
-			'5',
-			'1',
-			'3',
-			'2',
-			'5',
-			'1',
-			'1',
-			'5'
-		]
-	},
-	{
-		name: 'Beyonce Knowles',
-		photo: 'http://www.billboard.com/files/styles/article_main_image/public/media/beyonce-feb-2014-billboard-650.jpg',
+		name: 'Missy Norman',
+		photo: '',
 		scores: [
 			'5',
 			'4',
@@ -143,11 +109,11 @@ var friendsArray = [
 			'5',
 			'5'
 		]
-	},
-	{
-		name: 'Elmo',
-		photo: 'http://1rjm5qg4v8732kpmn44ya6bj-wpengine.netdna-ssl.com/wp-content/uploads/2012/11/elmo-6601.png',
-		scores: [
+	}
+{
+	name: 'Elmo',
+		photo, 'http://1rjm5qg4v8732kpmn44ya6bj-wpengine.netdna-ssl.com/wp-content/uploads/2012/11/elmo-6601.png',
+		scores, [
 			'1',
 			'1',
 			'1',
@@ -159,7 +125,35 @@ var friendsArray = [
 			'1',
 			'1'
 		]
-	}
-];
+};
 
 module.exports = friendsArray;
+		[];
+
+<div class="input-field col s12">
+	<h3>Question 9</h3>
+	<h5>I like arts and crafts.</h5>
+	<select data-placeholder="" class="browser-default" id="q10">
+		<option value="">Choose an option</option>
+		<option value="1">1 (Strongly Disagree)</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5 (Strongly Agree)</option>
+	</select>
+</div>
+
+	<div class="input-field col s12">
+		<h3>Question 9</h3>
+		<h5>I like arts and crafts.</h5>
+		<select data-placeholder="" class="browser-default" id="q10">
+			<option value="">Choose an option</option>
+			<option value="1">1 (Strongly Disagree)</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5 (Strongly Agree)</option>
+		</select>
+	</div>
+</div>
+	

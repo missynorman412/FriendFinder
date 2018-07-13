@@ -11,8 +11,8 @@
 	<!-- Link to reset stylesheet -->
 	<link rel="stylesheet" href="css/reset.css">
 
-	<!-- Import Google Icon Font
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+	<!-- Import Google Icon Font -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
 
 	<!-- Compiled and minified Materialize CSS
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"> -->
@@ -230,23 +230,21 @@
 				name: $('#userName').val().trim(),
 				photo: $('#userPhoto').val().trim(),
 				scores: [
-					$('#question1').val().trim(),
-					$('#question2').val().trim(),
-					$('#question3').val().trim(),
-					$('#question4').val().trim(),
-					$('#question5').val().trim(),
-					$('#question6').val().trim(),
-					$('#question7').val().trim(),
-					$('#question8').val().trim(),
-					$('#question9').val().trim(),
-					$('#question10').val().trim()
+					$('#q1').val().trim(),
+					$('#q2').val().trim(),
+					$('#q3').val().trim(),
+					$('#q4').val().trim(),
+					$('#q5').val().trim(),
+					$('#q6').val().trim(),
+					$('#q7').val().trim(),
+					$('#q8').val().trim(),
+					$('#q9').val().trim(),
+					$('#q10').val().trim()
 				]
 			};
-			// console.log('userInput = ' + JSON.stringify(userInput));
 			// Add user inputs to friends list
 			$.post('/api/friends', userInput)
 				.done(function (data) {
-					// console.log('response = ' + JSON.stringify(data));
 					// Set the name and image values of friend match
 					$('#userMatch').html(data.matchName);
 					$("#userMatchImage").attr("src", data.matchImage);

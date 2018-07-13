@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Friend Finder Pro</title>
 
 	<!-- Link to the jQuery Library -->
-  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-  
+
 	<!-- Link to reset stylesheet -->
 	<link rel="stylesheet" href="css/reset.css">
 
 	<!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<!-- Compiled and minified Materialize CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
 	<!-- Compiled and minified Materialize JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-          
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -29,9 +30,15 @@
 				<i class="fa fa-address-book-o fa-5x" aria-hidden="true" id=logo-icon></i>
 				<a href="/" class="brand-logo" id="logo">Friend Finder</a>
 				<ul class="right hide-on-med-and-down" id="head-nav-links">
-					<li><a href="/survey">Survey</a></li>
-					<li><a href="/api/friends">API Friends List</a></li>
-					<li><a href="https://github.com/angrbrd/friend-finder">GitHub Repo</a></li>
+					<li>
+						<a href="/survey">Survey</a>
+					</li>
+					<li>
+						<a href="/api/friends">API Friends List</a>
+					</li>
+					<li>
+						<a href="https://github.com/angrbrd/friend-finder">GitHub Repo</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
@@ -62,15 +69,15 @@
 						<!-- Survey Questions -->
 						<div class="input-field col s12">
 							<h3>Question 1</h3>
-						  -0	<h5>I am a nice person.</h5>
+							<h5>I am a nice person.</h5>
 							<select data-placeholder="" class="browser-default" id="q1">
-									<option value="">Choose an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
+								<option value="">Choose an option</option>
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
 						</div>
 
 						<div class="input-field col s12">
@@ -84,7 +91,7 @@
 								<option value="4">4</option>
 								<option value="5">5 (Strongly Agree)</option>
 							</select>
-					</div>
+						</div>
 
 						<div class="input-field col s12">
 							<h3>Question 3</h3>
@@ -148,7 +155,8 @@
 								<option value="3">3</option>
 								<option value="4">4</option>
 								<option value="5">5 (Strongly Agree)</option>
-							</select>						</div>
+							</select>
+						</div>
 
 						<div class="input-field col s12">
 							<h3>Question 8</h3>
@@ -177,33 +185,33 @@
 						</div>
 
 						<div class="input-field col s12">
-								<h3>Question 10</h3>
-								<h5>I like to pick my nose.</h5>
-								<select data-placeholder="" class="browser-default" id="q10">
-									<option value="">Choose an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
-							</div>
-	
-				
-						<!-- Survey Submit Button -->
-						
-							<button class="btn waves-effect waves-light" type="submit" name="action" id="submitButton">Submit Responses
-								<i class="material-icons right">send</i>
-							</button>
+							<h3>Question 10</h3>
+							<h5>I like to pick my nose.</h5>
+							<select data-placeholder="" class="browser-default" id="q10">
+								<option value="">Choose an option</option>
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
 						</div>
+
+
+						<!-- Survey Submit Button -->
+
+						<button class="btn waves-effect waves-light" type="submit" name="action" id="submitButton">Submit Responses
+							<i class="material-icons right">send</i>
+						</button>
 					</div>
 				</div>
 			</div>
 		</div>
+		
 	</main>
 
 	<script type="text/javascript">
-		$(document).ready(function() {
+		$(document).ready(function () {
 			$('select').material_select();
 			$('.modal').modal({
 				dismissible: false, // Modal can be dismissed by clicking outside of the modal
@@ -215,13 +223,13 @@
 			});
 		});
 		// Activate submit button
-		$('#submitButton').on('click', function(event) {
+		$('#submitButton').on('click', function (event) {
 			event.preventDefault();
 			// Gather user inputs
 			var userInput = {
 				name: $('#userName').val().trim(),
 				photo: $('#userPhoto').val().trim(),
-				scores:[
+				scores: [
 					$('#question1').val().trim(),
 					$('#question2').val().trim(),
 					$('#question3').val().trim(),
@@ -237,15 +245,16 @@
 			// console.log('userInput = ' + JSON.stringify(userInput));
 			// Add user inputs to friends list
 			$.post('/api/friends', userInput)
-      		.done(function(data) {
-      			// console.log('response = ' + JSON.stringify(data));
-      			// Set the name and image values of friend match
-      			$('#userMatch').html(data.matchName);
-		    	$("#userMatchImage").attr("src", data.matchImage);
-		    	// Pop open the modal dialog
-      			$('#modal1').modal('open');
-      		});
+				.done(function (data) {
+					// console.log('response = ' + JSON.stringify(data));
+					// Set the name and image values of friend match
+					$('#userMatch').html(data.matchName);
+					$("#userMatchImage").attr("src", data.matchImage);
+					// Pop open the modal dialog
+					$('#modal1').modal('open');
+				});
 		});
 	</script>
 </body>
+
 </html>
